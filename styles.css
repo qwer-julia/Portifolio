@@ -1,19 +1,24 @@
 body{
     background-color: #D8C2A7;
-    color: #763f21;
+    color: #763F21;
     font-family: Andale Mono, monospace;
 }
+
 h2{
     font-weight: normal;
 }
+
 h3{
     font-size: 20px;
 }
+
 .centralizacao{
     margin: 0 auto;
     max-width: 1000px;
-    padding: 20px 15px;
-    
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
 }
 
 section{
@@ -99,27 +104,13 @@ a:visited {
 
 .centralizacao>.texto_maior{
     text-align: center;
-}
-
-.centralizacao>div{
-    padding: 60px;
+    padding: 50px 0;
 }
 
 .experiencia_empresas{
     padding: 20px;
     border: #763F21;
     border-style: dashed;
-}
-
-.swiper_cursos{
-    display: block;
-    list-style: none;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    z-index: 1;
 }
 
 @keyframes ponteiro {
@@ -155,13 +146,15 @@ a:visited {
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-.container {
-    display: flex;
+  .container {
     position: relative;
-    padding: 15px;
+    padding: 30px 0px;
     margin: 0 auto;
   }
   
@@ -170,30 +163,34 @@ a:visited {
   }
   
   .arrow-left,
-.arrow-right {
-    position: relative;
+  .arrow-right {
+    position: absolute;
     top: 0;
     left: 0;
     right: auto;
     bottom: 0;
     font-size: 20px;
+    line-height: 250px;
     width: 40px;
-    color: #F8E1CF;
-    background: #D2A27A;
+    color: #fff;
+    transition: all 600ms ease-in-out;
+    background: linear-gradient(to left, transparent 0%, #763F21 200%);
+    opacity: 0.1;
     cursor: pointer;
     border: none;
-    height: fit-content;
-    margin: auto 10px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-
-.arrow-right {
-  right: 0;
-  left: auto;
-  text-align: right;
-}
+  }
+  
+  .arrow-left:hover,
+  .arrow-right:hover {
+    opacity: 1;
+  }
+  
+  .arrow-right {
+    right: 0;
+    left: auto;
+    text-align: right;
+    background: linear-gradient(to right, transparent 0%, #763F21 200%);
+  }
   
   .gallery {
     display: flex;
@@ -202,8 +199,9 @@ a:visited {
   }
   
   .item {
-    width: 300px;
+    width: 250px;
     height: 400px;
+    padding: 10px;
     flex-shrink: 0;
     transition: all 600ms ease-in-out;
     opacity: 0.5;
@@ -213,21 +211,19 @@ a:visited {
     opacity: 1;
   }
   
-  /* This is from w3schools */
-  /* 
-  https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
-  /* Hide scrollbar for Chrome, Safari and Opera */
   .gallery-wrapper::-webkit-scrollbar {
     display: none;
   }
   
-  /* Hide scrollbar for IE, Edge and Firefox */
   .gallery-wrapper {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
   }
+  
+
 
 .certificacoes{
+
     background-color: #F8E1CF;
 }
 
@@ -275,6 +271,7 @@ a:visited {
     min-width: 35%;
     -webkit-box-align: center;
     align-items: center;
+    padding: 20px;
 }
 
 .contato{
@@ -300,7 +297,7 @@ a:visited {
     padding-left: 20px;
     padding-right: 20px;
     z-index: 2;
-
+    
 }
 
 .home{
@@ -336,3 +333,4 @@ a:visited {
 ::-webkit-scrollbar-thumb {
     background-color: #763F21;
     border-radius: 10px;
+}
