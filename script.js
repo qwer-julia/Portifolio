@@ -5,7 +5,7 @@ const maxItems = items.length;
 
 controls.forEach((control) => {
   control.addEventListener("click", (e) => {
-    isLeft = e.target.classList.contains("arrow-left");
+    isLeft = e.target.classList.contains("arrow-left") 
 
     if (isLeft) {
       currentItem -= 1;

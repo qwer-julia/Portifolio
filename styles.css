@@ -1,3 +1,170 @@
+/* celular */
+@media (max-width: 768px) {
+     .texto_maior{
+        font-family: 'pixelFontB',sans-serif;
+        display: block;
+        font-size: 50px;
+    }
+
+    h3{
+        font-size: 17px;
+    }
+
+    .avatar-mobile{
+        margin: 0 auto;
+        height: 15rem;
+        position: relative;
+    }
+
+    .avatar-pc{
+        display: none;
+    }
+
+    .apresentacao{
+        display: block;
+        align-self: auto;
+        padding: 60px;
+        margin: auto;
+        font-size: 20px;
+        margin: auto auto;
+        text-align: center;
+    }
+
+    .links_externos{
+        display: block;
+        text-align: center; 
+        margin: 0 auto;
+    }
+
+    .btn_externo{
+        margin: 20px auto;
+    }
+    
+    .desktop-arrow-left{
+        display: none;
+    }
+
+    .mobile-arrow-left,
+    .arrow-right {
+        background-color: #D2A27A;
+        padding: 10px;
+        font-size: 20px;
+        width: 40px;
+        color: #F8E1CF;
+        transition: all 600ms ease-in-out;
+        cursor: pointer;
+        border: none;
+        text-align: center;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+
+  .arrow-controls{
+    text-align: center;
+  }
+}
+
+/* pc */
+@media (min-width: 768px) {
+    .texto_maior{
+        font-family: 'pixelFontB',sans-serif;
+        display: block;
+        font-size: 80px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    .avatar-pc{
+        margin: auto;
+        height: 30rem;
+        position: relative;
+        animation: 2.1s linear 0s infinite alternate-reverse none running avatar;
+    }
+
+    
+    .avatar-mobile{
+        display: none;
+    }
+
+    .apresentacao{
+        display: flex;
+        align-self: auto;
+        padding: 60px;
+        margin: auto;
+        font-size: 20px;
+        margin: auto auto;
+    }
+
+    .links_externos{
+        display: flex;
+        gap: 1rem;
+        margin: 20px 0;
+    }
+
+    .mobile-arrow-left{
+        display: none;
+    }
+
+    .desktop-arrow-left,
+  .arrow-right {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 20px;
+    line-height: 250px;
+    width: 40px;
+    color: #fff;
+    transition: all 600ms ease-in-out;
+    background: linear-gradient(to left, transparent 0%, #763F21 200%);
+    opacity: 0.1;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .desktop-arrow-left:hover,
+  .arrow-right:hover {
+    opacity: 1;
+  }
+  
+  .arrow-right {
+    right: 0;
+    left: auto;
+    text-align: right;
+    background: linear-gradient(to right, transparent 0%, #763F21 200%);
+  }
+}
+
+/* geral */
+
+.btn_externo{
+    font-family: 'pixelFontB',sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+    background-color: #763F21;
+    border-radius: 10px;
+    width: fit-content;
+    padding:15px;
+    align-items: center;
+    border-style: dashed;
+    border-color:transparent;
+    display: flex;
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 body{
     background-color: #D8C2A7;
     color: #763F21;
@@ -6,10 +173,6 @@ body{
 
 h2{
     font-weight: normal;
-}
-
-h3{
-    font-size: 20px;
 }
 
 .centralizacao{
@@ -25,15 +188,6 @@ section{
     margin-top: 30px;
 }
 
-.apresentacao{
-    display: flex;
-    align-self: auto;
-    padding: 60px;
-    margin: auto;
-    font-size: 20px;
-    margin: auto auto;
-}
-
 .cargo::after {
     content: "|";
     margin-left: 5px;
@@ -41,29 +195,11 @@ section{
     animation: 0.7s ease 0s infinite normal none running ponteiro;
 }
 
-.texto_maior{
-    font-family: 'pixelFontB',sans-serif;
-    display: block;
-    font-size: 80px;
-}
-
 .texto_menor{
     font-family: 'pixelFontS',sans-serif;
 }
 
-.btn_externo{
-    font-family: 'pixelFontB',sans-serif;
-    font-size: 40px;
-    text-decoration: none;
-    background-color: #763F21;
-    border-radius: 10px;
-    display: flex;
-    width: fit-content;
-    padding:15px;
-    align-items: center;
-    border-style: dashed;
-    border-color:transparent;
-}
+
 
 a{
     text-decoration: none;
@@ -84,19 +220,6 @@ a:visited {
     box-sizing:border-box; 
 }
 
-.avatar{
-    margin: auto;
-    height: 30rem;
-    position: relative;
-    animation: 2.1s linear 0s infinite alternate-reverse none running avatar;
-}
-
-.links_externos{
-    display: flex;
-    gap: 1rem;
-
-}
-
 .sobreMim{
     background-color: #D2A27A;
 }
@@ -113,45 +236,6 @@ a:visited {
     border-style: dashed;
 }
 
-@keyframes ponteiro {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
-
-@keyframes avatar {
-    0% {
-        top: 15px;
-    }
-    
-    100% {
-        top: -15px;
-    }
-}
-
-@font-face {
-    font-family: 'pixelFontB';
-    src: url('./fonts/pixels.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'pixelFontS';
-    src: url('./fonts/Pixeled.ttf') format('truetype');
-}
-
-*{
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
   .container {
     position: relative;
     padding: 30px 0px;
@@ -160,36 +244,6 @@ a:visited {
   
   .gallery-wrapper {
     overflow-x: auto;
-  }
-  
-  .arrow-left,
-  .arrow-right {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: auto;
-    bottom: 0;
-    font-size: 20px;
-    line-height: 250px;
-    width: 40px;
-    color: #fff;
-    transition: all 600ms ease-in-out;
-    background: linear-gradient(to left, transparent 0%, #763F21 200%);
-    opacity: 0.1;
-    cursor: pointer;
-    border: none;
-  }
-  
-  .arrow-left:hover,
-  .arrow-right:hover {
-    opacity: 1;
-  }
-  
-  .arrow-right {
-    right: 0;
-    left: auto;
-    text-align: right;
-    background: linear-gradient(to right, transparent 0%, #763F21 200%);
   }
   
   .gallery {
@@ -333,4 +387,33 @@ a:visited {
 ::-webkit-scrollbar-thumb {
     background-color: #763F21;
     border-radius: 10px;
+}
+
+@keyframes ponteiro {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes avatar {
+    0% {
+        top: 15px;
+    }
+    
+    100% {
+        top: -15px;
+    }
+}
+
+@font-face {
+    font-family: 'pixelFontB';
+    src: url('./fonts/pixels.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'pixelFontS';
+    src: url('./fonts/Pixeled.ttf') format('truetype');
 }
