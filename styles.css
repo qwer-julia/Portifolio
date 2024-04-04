@@ -1,5 +1,15 @@
 /* celular */
 @media (max-width: 749px) {
+    .habilidade>div{
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        min-width: 35%;
+        -webkit-box-align: center;
+        align-items: center;
+        margin: 30px 0px;
+    }
+
      .texto_maior{
         font-family: 'pixelFontB',sans-serif;
         display: block;
