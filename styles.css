@@ -1,5 +1,5 @@
 /* celular */
-@media (min-width: 300px) {
+@media (max-width: 749px) {
      .texto_maior{
         font-family: 'pixelFontB',sans-serif;
         display: block;
