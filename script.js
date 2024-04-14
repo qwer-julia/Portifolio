@@ -31,3 +31,35 @@ controls.forEach((control) => {
     items[currentItem].classList.add("current-item");
   });
 });
+
+const ul = document.getElementById("lista-projetos")
+function getApiGitHub() {
+  fetch('https://api.github.com/users/qwer-julia/repos')
+    .then(async res => {
+
+      if(!res.ok) {
+        throw new Error(res.status)
+      }
+
+      var data = await res.json()
+
+      data.map(item => {
+        let li = document.createElement('li')
+
+        li.innerHTML = `
+        <strong class="titulo-projeto">${item.name.toUpperCase()}</strong>
+        <p>Data Criação: 
+        ${Intl.DateTimeFormat('pt-BR')
+        .format(new Date(item.created_at))}
+        </p>
+        <h3> ${item.description || "Sem descrição no momento"} </h3>
+        <a target="_blank" href=" ${item.html_url}">Clique aqui para acessar</a>
+      `
+      ul.appendChild(li)
+
+      })
+
+    }).catch(e => console.log(e))
+}
+
+getApiGitHub()

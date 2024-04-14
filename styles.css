@@ -394,6 +394,51 @@ a:visited {
     justify-content: center;
 }
 
+.titulo-projeto{
+    font-family: 'pixelFontB';
+    font-size: 25px;
+    text-align: center;
+}
+
+.lista-projetos>li{
+    background-color: #F8E1CF;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    border-radius: 10px;
+    font-family: Andale Mono, monospace;
+    font-size: 20px;
+    height: 280px;
+}
+
+.lista-projetos>li>p{
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #D2A27A;
+
+}
+
+
+.lista-projetos>li>a{
+    color: #D2A27A;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+
+}
+
+.lista-projetos>li>h3{
+    margin: 20px 0;
+}
+
+.lista-projetos{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
 ::-webkit-scrollbar {
     width: 5px;
 }
